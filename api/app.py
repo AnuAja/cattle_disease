@@ -1,14 +1,12 @@
 from flask import Flask, render_template, request, jsonify
 import numpy as np
 import json
-import joblib  # Untuk memuat model yang sudah dilatih
+import joblib 
 
-app = Flask(__name__, template_folder="templates")
+app = Flask(__name__)
 
-with open("knn_model.pkl", "rb") as model_file:
-    model = pickle.load(model_file)
+model = joblib.load('knn_model.pkl')
 
-# List gejala sesuai dataset
 list_gejala = [
     "Lepuhan di mulut",
     "Luka di kuku",
