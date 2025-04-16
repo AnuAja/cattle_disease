@@ -283,6 +283,3 @@ def hasil():
     data_json = request.args.get("data", "{}")  # Ambil data dari URL
     data = json.loads(data_json)  # Ubah dari string JSON ke dictionary
     return render_template("hasil.html", data=data)
-
-if __name__ == "__main__":
-    app.run(debug=True)
