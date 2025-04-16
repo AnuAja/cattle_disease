@@ -5,7 +5,7 @@ import joblib
 
 app = Flask(__name__)
 
-model = joblib.load('knn_model.pkl')
+model = joblib.load('api/knn_model.pkl')
 
 list_gejala = [
     "Lepuhan di mulut",
